@@ -29,7 +29,7 @@ project 1 - A Random Quote Generator
   reminder:"You can do it" 
   }
   ];
-  console.log(quotes);  
+ 
 
   function random_bg_color() {                // quote array changed to random colors (bonus)
     var x = Math.floor(Math.random() * 256);
@@ -37,9 +37,7 @@ project 1 - A Random Quote Generator
     var z = Math.floor(Math.random() * 256);
     var bgColor = "rgb(" + x + "," + y + "," + z + ")";
    
-  console.log(bgColor);
-
-  document.body.style.background = bgColor;
+    document.body.style.background = bgColor;
   }
     
   function getRandomQuote () {               // Create getRandomQuote function
@@ -48,8 +46,7 @@ project 1 - A Random Quote Generator
   } 
   function printQuote ()     {               // Create `printQuote` function
   random_bg_color(); 
-  console.log(getRandomQuote());
-  
+   
  var message = "";   
  var result = getRandomQuote();             // variable will hold random quote object from quotes array
    message += "<p class='quote'>" + result.quote + "</p>";
@@ -68,10 +65,7 @@ project 1 - A Random Quote Generator
     printQuote();
     setInterval(function(){printQuote(); }, 24000);   // quote array change between 20 to 30  seconds bonus
         
-      
-  console.log(printQuote);  
-
-
+        
   document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
