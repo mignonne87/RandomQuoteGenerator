@@ -2,7 +2,7 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-
+ // Carla H Project 1 Assignment 
 
   var quotes = [                  // Create variable name 'quotes' in the quote array
   {
