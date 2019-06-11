@@ -26,11 +26,10 @@ project 1 - A Random Quote Generator
   {
   quote: "Believe you can and your halfway there.", 
   source:"Theodore Roosevelt",
-  reminder:"You can do it" 
+  category:"You can do it" 
   }
   ];
  
-
   function random_bg_color() {                // quote array changed to random colors (bonus)
     var x = Math.floor(Math.random() * 256);
     var y = Math.floor(Math.random() * 256);
@@ -41,7 +40,7 @@ project 1 - A Random Quote Generator
   }
     
   function getRandomQuote () {               // Create getRandomQuote function
-  var randomNumber = Math.floor(Math.random() * quotes.length);  // Create RandomNumber between 0-4
+  var randomNumber = Math.floor(Math.random() * quotes.length);  // get Random quote within quote array
   return quotes[randomNumber];               // return RandomQuote Number
   } 
   function printQuote ()     {               // Create `printQuote` function
@@ -51,14 +50,17 @@ project 1 - A Random Quote Generator
  var result = getRandomQuote();             // variable will hold random quote object from quotes array
    message += "<p class='quote'>" + result.quote + "</p>";
    message += "<p class='source'>" + result.source;
-
+   
       if (result.citation)   {
         message += "<span class='citation'>" + result.citation + "</span>";
       }
       if (result.year)       {
-        message += "<span class='year'>" + result.year + "</span>"
+        message += "<span class='year'>" + result.year + "</span>";
       }
-        message += "</p>";                  // close GetRandom Quote String
+       if (result.category)  {     
+        message += "<span class= 'category'>" + result.category + "</span>"
+      }
+       message += "</p>";                  // close GetRandom Quote String
         document.getElementById('quote-box').innerHTML = message;       
       }
         
