@@ -40,7 +40,7 @@ project 1 - A Random Quote Generator
   }
     
   function getRandomQuote () {               // Create getRandomQuote function
-  var randomNumber = Math.floor(Math.random() * quotes.length);  // get Random quote within quote array
+  var randomNumber = Math.floor(Math.random() * quotes.length);  // runs a random number between 0 and 1 
   return quotes[randomNumber];               // return RandomQuote Number
   } 
   function printQuote ()     {               // Create `printQuote` function
